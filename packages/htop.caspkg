@@ -1,0 +1,36 @@
+{
+  "name": "htop",
+  "version": "3.4.1",
+  "release": 1,
+  "description": "An interactive process viewer for Unix systems.",
+  "author": "Htop Team",
+  "license": "GPLv2",
+  "source": {
+    "url": "https://github.com/htop-dev/htop/releases/download/3.4.1/htop-3.4.1.tar.xz",
+    "type": "tar.xz"
+  },
+  "dependencies": {
+    "gcc": "*",
+    "make": "*",
+    "libncursesw5-dev": "*"
+  },
+  "opt_dependencies": [],
+  "build": {
+    "prepare": [
+      "echo 'Preparing Htop build environment...'",
+      "./configure --prefix=/usr/local"
+    ],
+    "install": [
+      "make",
+      "make install"
+    ],
+    "post_install": [
+      "echo 'Htop installed successfully!'",
+      "echo 'Run htop to start the process viewer.'"
+    ],
+    "uninstall": [
+      "make uninstall"
+    ]
+  },
+  "executable": "htop"
+}
