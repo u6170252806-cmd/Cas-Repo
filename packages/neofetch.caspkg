@@ -12,40 +12,17 @@
     "dependencies": {
         "bash": ">=3.2"
     },
-    "opt_dependencies": [
-        {
-            "id": 1,
-            "description": "Optional image rendering backends for terminal images.",
-            "options": [
-                "w3m-img",
-                "iTerm2",
-                "Terminology",
-                "kitty",
-                "libsixel",
-                "termpix",
-                "pixterm",
-                "catimg",
-                "jp2a",
-                "caca-utils",
-                "libcaca"
-            ],
-            "default": "w3m-img"
-        }
-    ],
+    "opt_dependencies": [],
     "build": {
-        "env": {
-            "PREFIX": "/home/yourusername/.cas"
-        },
         "prepare": [
             "echo 'Preparing Neofetch build environment...'"
         ],
         "install": [
-            "mkdir -p ${PREFIX}/bin",
-            "cp neofetch ${PREFIX}/bin/",
-            "chmod +x ${PREFIX}/bin/neofetch"
+            "cp neofetch {INSTALL_DIR}/bin/",
+            "chmod +x {INSTALL_DIR}/bin/neofetch"
         ],
         "uninstall": [
-            "rm -f ${PREFIX}/bin/neofetch"
+            "rm -f {INSTALL_DIR}/bin/neofetch"
         ]
     }
 }
