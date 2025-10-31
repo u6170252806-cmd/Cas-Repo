@@ -7,7 +7,7 @@
     "license": "GPL-3.0-or-later",
     "source": {
         "url": "https://www.nano-editor.org/dist/v8/nano-8.6.tar.gz",
-        "sha256": "0d6c44f72c8b8ffb2d88778f4e4c47cf0e115f73b34e2a81d8cba0c8f0d8cfc9",
+        "sha256": "86608f72b77787bf15dde922077c62a679aa4536192942991f58a92062838187",
         "type": "tar.gz"
     },
     "dependencies": {
@@ -33,3 +33,4 @@
         ]
     }
 }
+
