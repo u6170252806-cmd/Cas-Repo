@@ -1,0 +1,35 @@
+{
+    "name": "nano",
+    "version": "8.6",
+    "release": 1,
+    "description": "Nano is a simple, user-friendly command-line text editor.",
+    "author": "GNU Project",
+    "license": "GPL-3.0-or-later",
+    "source": {
+        "url": "https://www.nano-editor.org/dist/v8/nano-8.6.tar.gz",
+        "sha256": "0d6c44f72c8b8ffb2d88778f4e4c47cf0e115f73b34e2a81d8cba0c8f0d8cfc9",
+        "type": "tar.gz"
+    },
+    "dependencies": {
+        "make": ">=4.0",
+        "gcc": ">=9.0"
+    },
+    "opt_dependencies": [],
+    "build": {
+        "env": {
+            "MAKEFLAGS": "-j$(nproc)",
+            "PREFIX": "/usr/local"
+        },
+        "prepare": [
+            "echo 'Preparing build environment...'"
+        ],
+        "install": [
+            "./configure --prefix=${PREFIX}",
+            "make",
+            "make install"
+        ],
+        "uninstall": [
+            "make uninstall"
+        ]
+    }
+}
