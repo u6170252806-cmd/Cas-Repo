@@ -18,7 +18,7 @@
             "echo 'Preparing Neofetch build environment...'"
         ],
         "install": [
-            "cp neofetch {INSTALL_DIR}/bin/",
+            "cp neofetch-7.1.0/neofetch {INSTALL_DIR}/bin/",
             "chmod +x {INSTALL_DIR}/bin/neofetch"
         ],
         "uninstall": [
